@@ -1,0 +1,13 @@
+{
+  "name": "Seikon Framework",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Seikon": {
+        "$path": "src"
+      }
+    }
+  }
+}
