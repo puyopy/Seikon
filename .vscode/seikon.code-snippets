@@ -1,0 +1,43 @@
+{
+	"HeaderComment": {
+		"scope": "lua,luau",
+		"prefix": ["headerc","hc"],
+		"body": [
+			"-- $TM_FILENAME",
+			"-- Purpose: ${0}",
+			"-- $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE",
+		],
+		"description": "Header comment. has purpose and file name."
+	},
+	"Manager": {
+		"scope": "lua,luau",
+		"prefix": ["managertem"],
+		"body": [
+			"local ${0} = {Name = '${0}'}",
+			"",
+			"function ${0}:Init()",
+			"",
+			"end",
+			"",
+			"",
+			"return ${0}"
+		]
+	},
+	"Component": {
+		"scope": "lua,luau",
+		"prefix": ["component","tcomponent","componentt"],
+		"body": [
+			"local ${0} = {Properties = {}}",
+			"",
+			"function ${0}:Init()",
+			"",
+			"end",
+			"",
+			"function ${0}:Update()",
+			"",
+			"end",
+			"",
+			"return ${0}"
+		]
+	}
+}
