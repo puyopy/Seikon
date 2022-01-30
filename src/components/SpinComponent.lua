@@ -1,4 +1,4 @@
-local Transform = {Config = nil,Properties = {Speed = Vector3.new()}}
+local Transform = {Config = nil,Properties = {Speed = Vector3.new(),Client = false}}
 Transform.__index = Transform
 
 function Transform:Init(Instance,Configuration)

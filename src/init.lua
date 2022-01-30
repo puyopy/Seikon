@@ -2,6 +2,8 @@
     Entrypoint for Seikon Framework
 ]]
 
+local RunService = game:GetService("RunService")
+
 local old_require = require
 local require = require(script.path).require
 local log = require("core/tier1/log")
@@ -9,6 +11,14 @@ local core = script.core
 
 -- Main seikon namespace
 local Seikon = {}
+local Envrionment = RunService:IsClient()
+
+if Envrionment then
+    Seikon.Env = "Client"
+else
+    Seikon.Env = "Server"
+end
+
 Seikon.require = require
 
 function Seikon:Initialize()
@@ -19,7 +29,7 @@ function Seikon:Initialize()
         end
      end
 
-     -- we have no real map so lets just load it
+     -- we have no real map so lets just "load" it
      Seikon.Managers:FireManagerEvent("OnMapLoad",workspace.Map)
 end
 
